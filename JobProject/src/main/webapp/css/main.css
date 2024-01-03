@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+.nav_block {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: 1rem 4rem 1rem 4rem;
+	align-items: center;
+}
+
+.nav_block ul {
+	display: flex;
+}
+
+.nav_block ul li {
+	font-size: 18px;
+	margin: 1rem;
+}
+
+.main_block {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.main_title {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.main_title h1 {
+	font-size: 2.8rem;
+}
+
+.main_content {
+	width: 100%;
+}
+
+/* 메뉴바 관련 */
+.main_content_list {
+	display: flex;
+	margin: 2rem;
+	justify-content: center;
+}
+
+.main_content_list li {
+	width: 100%;
+	text-align: center;
+	border: 1px solid black;
+	font-size: 1.7rem;
+	padding: 1rem;
+	cursor: pointer;
+}
+
+.main_content_list li:first-child {
+	border-radius: 1rem 0 0 1rem;
+}
+
+.main_content_list li:last-child {
+	border-radius: 0 1rem 1rem 0;
+}
+
+.main_content_list li:hover {
+	background-color: lightblue;
+}
+
+/* .main_content_list li.clicked {
+	background: linear-gradient(145deg, rgba(86, 174, 214, 1) 15%,
+		rgba(0, 144, 208, 1) 100%);
+	color: white;
+} */
+.main_content_list_float {
+	position: fixed;
+	right: 3%;
+	bottom: 15%;
+}
+
+.main_content_list_float li {
+	width: 100%;
+	text-align: center;
+	border: 1px solid black;
+	font-size: 1.2rem;
+	padding: 0.5rem;
+	cursor: pointer;
+}
+
+.main_content_list_float li:first-child {
+	border-radius: 1rem 1rem 0 0;
+}
+
+.main_content_list_float li:last-child {
+	border-radius: 0 0 1rem 1rem;
+}
+
+.main_content_list_float li:hover {
+	background-color: lightblue;
+}
+
+/* .main_content_list_float li.clicked {
+	background: linear-gradient(145deg, rgba(86, 174, 214, 1) 15%,
+		rgba(0, 144, 208, 1) 100%);
+	color: white;
+} */
+
+/* 메뉴바 관련 */
+.main_content_svg {
+	float: right;
+	margin-right: 2rem;
+}
+
+.main_content_svg svg {
+	width: 28px;
+	height: 28px;
+	margin: 0.5rem;
+}
+
+.job_wrapper {
+	display: grid;
+	gap: 1rem 1rem;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.job_wrapper>div {
+	border: 1px solid black;
+	height: 150px;
+	overflow: hidden;
+}
+
+#section1, #section2, #section3 {
+	padding: 2rem;
+}
+
+#section1 h2, #section2 h2, #section3 h2 {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.job_info {
+	height: 100%;
+}
+
+.job_info img {
+	padding: 1rem;
+}
+
+.job_info>div {
+	padding: 0 1rem 0 1rem;
+}
+
+.job_detail {
+	display: grid;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	font-size: 1rem;
+	text-align: center;
+}
+
+/* 모달 CSS */
+#modal {
+	display: none;
+	position: fixed;
+	width: 550px;
+	height: 500px;
+	margin:0 auto;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 10%;
+}
+
+#modal h2 {
+	margin: 0;
+}
+
+#modal button {
+	position: absolute;
+	width: 100px;
+	margin-left: calc(100% - 100px - 10px);
+}
+
+#modal .modal_content {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	border: 2px solid #666;
+}
+
+.modal_content img{
+	width: 100%;
+}
+
+#modal .modal_layer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: -1;
+}
+
+/* 모달 CSS */

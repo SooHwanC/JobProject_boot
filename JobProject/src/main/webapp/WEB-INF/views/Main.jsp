@@ -81,9 +81,9 @@
 			<!-- 글쓰기모달 -->
 			<div id="modal2">
 				<div>
-					<form action="">
+					<form action="jobWrite.do" method="post">
 						<div>
-							<select>
+							<select name="selected">
 								<option value="smhrd">취업연계</option>
 								<option value="saramin">사람인</option>
 								<option value="jabko">잡코리아</option>
@@ -100,19 +100,19 @@
 							<div>
 								<label for="company">기업</label>
 							</div>
-							<input type="text" id="company">
+							<input type="text" name="company">
 						</div>
 						<div class="form_input">
 							<div>
 								<label for="recruit_field">모집분야</label>
 							</div>
-							<input type="text" id="recruit_field">
+							<input type="text" name="recruit_field">
 						</div>
 						<div class="form_date">
 							<div>
 								<label for="dead_line">모집기한</label>
 							</div>
-							<input type="date" id="dead_line">
+							<input type="date" name="dead_line">
 						</div>
 						<div>
 							<h2>Detail</h2>
@@ -121,25 +121,28 @@
 							<div>
 								<label for="academic">학력</label>
 							</div>
-							<input type="text" id="academic">
+							<input type="text" name="academic">
 						</div>
 						<div class="form_input">
 							<div>
 								<label for="area">근무지역</label>
 							</div>
-							<input type="text" id="area">
+							<input type="text" name="area">
 						</div>
 						<div class="form_input">
 							<div>
 								<label for="salary">연봉</label>
 							</div>
-							<input type="text" id="salary">
+							<input type="text" name="salary">
 						</div>
 						<div class="form_textarea">
 							<div>
 								<label for="requirement">자격요건</label>
 							</div>
-							<textarea id="requirement" rows="3"></textarea>
+							<textarea name="requirement" rows="3"></textarea>
+						</div>
+						<div>
+							<button type="submit">작성완료</button>
 						</div>
 
 					</form>

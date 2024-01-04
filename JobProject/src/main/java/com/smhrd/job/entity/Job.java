@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Job {
-	
+
 	private int job_num;
 	private String type;
 	private String thumbnail;
@@ -19,6 +19,6 @@ public class Job {
 	private String area;
 	private String salary;
 	private String requirement;
-	
+	private String imgpath;
 
 }

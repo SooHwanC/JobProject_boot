@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -72,7 +72,7 @@
 
 				<div class="modal_content">
 					<button type="button" id="modal_close_btn">닫기</button>
-					<img src="img/sicc.png" />
+					<img src="" />
 				</div>
 
 				<div class="modal_layer"></div>
@@ -82,7 +82,7 @@
 			<!-- 글쓰기모달 -->
 			<div id="modal2">
 				<div>
-					<form action="jobWrite.do" method="post">
+					<form action="jobWrite.do" method="post" enctype="multipart/form-data">
 						<div>
 							<select name="type">
 								<option value="smhrd">취업연계</option>
@@ -92,7 +92,10 @@
 						</div>
 						<div class="form_radio">
 							<div></div>
-							<input type="radio" name="thumbnail" value="front" id="radio_front" checked> <label for="radio_front"> <img src="img/front.PNG" /></label> <input type="radio" name="thumbnail" value="back" id="radio_back"> <label for="radio_back"> <img src="img/back.PNG" /></label>
+							<input type="radio" name="thumbnail" value="front" id="radio_front" checked>
+							<label for="radio_front"> <img src="img/front.PNG" /></label>
+							<input type="radio" name="thumbnail" value="back" id="radio_back">
+							<label for="radio_back"> <img src="img/back.PNG" /></label>
 						</div>
 						<div class="form_input">
 							<div>
@@ -139,11 +142,19 @@
 							</div>
 							<textarea name="requirement" rows="3"></textarea>
 						</div>
+						<div class="form_image">
+							<input type="file" name="imageFile">
+						</div>
 						<div>
 							<button type="submit">작성완료</button>
 						</div>
 
 					</form>
+					<form action="uploadExcel" method="post" enctype="multipart/form-data">
+						<input type="file" name="file" />
+						<input type="submit" value="Upload" />
+					</form>
+
 				</div>
 				<div class="modal_layer"></div>
 			</div>
@@ -172,9 +183,12 @@
 						<div class="job_item">
 							<div class="job_info">
 								<img src="img/${job.thumbnail }.PNG" />
+								<div class="job_item_img_hide">
+									<img src="${job.imgpath }" />
+								</div>
 								<div>
 									<p>${job.company}</p>
-									<p>${job.field} </p>
+									<p>${job.field}</p>
 									<p>${job.duedate }</p>
 								</div>
 							</div>

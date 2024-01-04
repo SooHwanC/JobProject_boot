@@ -11,10 +11,10 @@ import com.smhrd.job.entity.Job;
 @Mapper
 public interface JobMapper {
 
-	@Insert("insert into job (job_num, type, thumbnail, company, field, duedate, academic, area, salary, requirement) values (default, #{type}, #{thumbnail}, #{company}, #{field}, #{duedate}, #{academic}, #{area}, #{salary}, #{requirement})")
+	@Insert("insert into job (job_num, type, thumbnail, company, field, duedate, academic, area, salary, requirement, imgpath) values (default, #{type}, #{thumbnail}, #{company}, #{field}, #{duedate}, #{academic}, #{area}, #{salary}, #{requirement}, #{imgpath})")
 	public int jobWite(Job job);
 
-	
 	@Select("select * from job")
 	public List<Job> getAllJobs();
+
 }

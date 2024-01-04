@@ -146,6 +146,10 @@
 	padding: 0 1rem 0 1rem;
 }
 
+.job_item_img_hide{
+	display: none;
+}
+
 .job_detail {
 	display: grid;
 	width: 100%;

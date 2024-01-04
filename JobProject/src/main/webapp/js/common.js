@@ -64,7 +64,8 @@ $(document).ready(function() {
 // 모달 관련
 
 $(".job_item").on("click", function() {
-	console.log("클릭함");
+	var imgPath = $(this).find(".job_item_img_hide img").attr("src");
+	$('#modal .modal_content img').attr('src', imgPath);
 	$("#modal").css("display", "block");
 });
 

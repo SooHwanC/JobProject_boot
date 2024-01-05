@@ -72,7 +72,7 @@ public class JobController {
 		job.setSalary(req.getParameter("salary"));
 		job.setRequirement(req.getParameter("requirement"));
 
-		int row = jobService.jobWite(job);
+		int row = jobService.jobWrite(job);
 
 	}
 

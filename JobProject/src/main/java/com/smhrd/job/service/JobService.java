@@ -20,8 +20,8 @@ public class JobService {
 	@Autowired
 	private JobMapper jobMapper;
 
-	public int jobWite(Job job) {
-		int row = jobMapper.jobWite(job);
+	public int jobWrite(Job job) {
+		int row = jobMapper.jobWrite(job);
 		return row;
 	}
 
@@ -60,7 +60,7 @@ public class JobService {
 				job.setSalary(salary);
 				job.setRequirement(requirement);
 
-				jobMapper.jobWite(job); 
+				jobMapper.jobWrite(job); 
 			}
 		}
 

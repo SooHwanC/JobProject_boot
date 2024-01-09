@@ -77,7 +77,7 @@ $(".job_item").on("click", function() {
 	$("#modal").css("display", "block");
 });
 
-$("#modal_close_btn").on("click", function() {
+$(".close_svg").on("click", function() {
 	$("#modal").css("display", "none");
 });
 
@@ -86,7 +86,7 @@ $(".write_btn").on("click", function() {
 	$("#modal2").css("display", "block");
 });
 
-$("#modal_close_btn2").on("click", function() {
+$(".close_svg").on("click", function() {
 	$("#modal2").css("display", "none");
 });
 

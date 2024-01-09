@@ -29,6 +29,7 @@
 		<div class="main_block">
 			<section class="main_title">
 				<h1>채용공고</h1>
+				<hr />
 			</section>
 			<section class="main_content">
 				<ul class="main_content_list">
@@ -71,7 +72,11 @@
 			<div id="modal">
 
 				<div class="modal_content">
-					<button type="button" id="modal_close_btn">닫기</button>
+					<div class="close_svg">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+  							<path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+						</svg>
+					</div>
 					<img src="" />
 				</div>
 
@@ -83,6 +88,11 @@
 			<div id="modal2">
 				<div>
 					<form action="jobWrite.do" method="post" enctype="multipart/form-data">
+						<div class="close_svg">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+  								<path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+							</svg>
+						</div>
 						<div>
 							<select name="type">
 								<option value="smhrd">취업연계</option>
@@ -117,6 +127,7 @@
 						</div>
 						<div>
 							<h2>Detail</h2>
+							<hr />
 						</div>
 						<div class="form_input">
 							<div>
@@ -179,6 +190,7 @@
 
 			<section id="section1">
 				<h2>취업연계</h2>
+				<hr />
 				<div class="job_wrapper">
 
 					<c:forEach items="${jobs}" var="job">
@@ -211,6 +223,7 @@
 			</section>
 			<section id="section2">
 				<h2>사람인</h2>
+				<hr />
 				<div class="job_wrapper">
 					<c:forEach items="${jobs}" var="job">
 						<c:if test="${job.type eq 'saramin' }">
@@ -236,6 +249,7 @@
 			</section>
 			<section id="section3">
 				<h2>잡코리아</h2>
+				<hr />
 				<div class="job_wrapper">
 					<c:forEach items="${jobs}" var="job">
 						<c:if test="${job.type eq 'jobko' }">

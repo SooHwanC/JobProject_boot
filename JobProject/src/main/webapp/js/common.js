@@ -127,21 +127,29 @@ $(document).ready(function() {
 $(document).ready(function() {
 	// 초기 로드 시 숨김 처리
 	$('.form_image').show();
-	$('form[action="uploadExcel"]').hide();
+	$('.form_url').hide();
+	//$('form[action="uploadExcel"]').hide();
 
 	// select 변경 시 이벤트 처리
 	$('select[name="type"]').change(function() {
 		var selectedValue = $(this).val();
 
 		if (selectedValue === 'smhrd') {
-			$('form[action="uploadExcel"]').hide();
+			//$('form[action="uploadExcel"]').hide();
+			$('.form_url').hide();
 			$('.form_image').show();
 		} else if (selectedValue === 'saramin' || selectedValue === 'jabko') {
 			$('.form_image').hide();
-			$('form[action="uploadExcel"]').show();
+			//$('form[action="uploadExcel"]').show();
+			$('.form_url').show();
 
 		}
 	});
+});
+
+$("#file").on('change', function() {
+	var fileName = $("#file").val();
+	$(".upload-name").val(fileName);
 });
 
 

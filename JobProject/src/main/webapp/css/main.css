@@ -146,7 +146,7 @@
 	padding: 0 1rem 0 1rem;
 }
 
-.job_item_img_hide{
+.job_item_img_hide {
 	display: none;
 }
 
@@ -233,17 +233,19 @@
 	z-index: -1;
 }
 
-.form_input, .form_date, .form_textarea, .form_radio {
+.form_input, .form_date, .form_textarea, .form_radio, .form_image,
+	.form_url {
 	display: flex;
 }
 
-.form_input>div, .form_date>div, .form_textarea>div, .form_radio>div {
+.form_input>div, .form_date>div, .form_textarea>div, .form_radio>div,
+	.form_image>div, .form_url>div {
 	width: 100px;
 }
 
-.form_input input {
+.form_input input, .form_url input, .form_textarea textarea {
 	display: block;
-	width: 100%;
+	width: 73%;
 	padding: 0.375rem 0.75rem;
 	font-size: 1rem;
 	font-weight: 400;
@@ -256,9 +258,70 @@
 	margin-bottom: 2rem;
 }
 
-.form_input input:focus {
+.form_input input:focus, .form_url input:focus, .form_textarea textarea:focus
+	{
 	border-color: #86b7fe;
 	box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
 	outline: 0;
 }
+
+.form_submit {
+	margin-top: 2rem;
+}
+
+.form_submit button {
+	padding: 0.5rem 0.5rem;
+	background: linear-gradient(145deg, rgba(86, 174, 214, 1) 0%,
+		rgba(0, 144, 208, 1) 100%);
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.13);
+	width: 50%;
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: #fff;
+	border-radius: 0.6rem;
+	display: block;
+	border: none;
+	margin: 0 auto;
+}
+
+.form_image .upload-name {
+	display: inline-block;
+	height: 40px;
+	padding: 0 10px;
+	vertical-align: middle;
+	border: 1px solid #dddddd;
+	width: 45%;
+	color: #999999;
+	border-radius: 0.25rem;
+}
+
+.form_image label {
+	display: flex;
+	padding: 10px 20px;
+	color: #fff;
+	background-color: #999999;
+	cursor: pointer;
+	height: 40px;
+	margin-left: 10px;
+	border-radius: 0.25rem;
+	align-items: center;
+}
+
+.form_image input[type="file"] {
+	position: absolute;
+	width: 0;
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+}
+
+.form_image {
+	height: 38px;
+}
+
+.form_url input{
+	margin-bottom: 0px;
+}
+
 /* 모달 CSS */

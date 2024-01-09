@@ -92,7 +92,10 @@
 						</div>
 						<div class="form_radio">
 							<div></div>
-							<input type="radio" name="thumbnail" value="front" id="radio_front" checked> <label for="radio_front"> <img src="img/front.PNG" /></label> <input type="radio" name="thumbnail" value="back" id="radio_back"> <label for="radio_back"> <img src="img/back.PNG" /></label>
+							<input type="radio" name="thumbnail" value="front" id="radio_front" checked>
+							<label for="radio_front"> <img src="img/front.PNG" /></label>
+							<input type="radio" name="thumbnail" value="back" id="radio_back">
+							<label for="radio_back"> <img src="img/back.PNG" /></label>
 						</div>
 						<div class="form_input">
 							<div>
@@ -139,16 +142,34 @@
 							</div>
 							<textarea name="requirement" rows="3"></textarea>
 						</div>
-						<div class="form_image">
+						<!-- 						<div class="form_image">
+							<div>
+								<p>이미지 업로드</p>
+							</div>
 							<input type="file" name="imageFile">
+						</div> -->
+						<div class="form_image">
+							<div>
+								<p>이미지 업로드</p>
+							</div>
+							<input class="upload-name" value="첨부파일" placeholder="첨부파일">
+							<label for="file">파일찾기</label>
+							<input type="file" id="file">
 						</div>
-						<div>
+						<div class="form_url">
+							<div>
+								<p>URL 업로드</p>
+							</div>
+							<input type="text" name="url">
+						</div>
+						<div class="form_submit">
 							<button type="submit">작성완료</button>
 						</div>
 
 					</form>
 					<form action="uploadExcel" method="post" enctype="multipart/form-data">
-						<input type="file" name="file" /> <input type="submit" value="Upload" />
+						<input type="file" name="file" />
+						<input type="submit" value="Upload" />
 					</form>
 
 				</div>

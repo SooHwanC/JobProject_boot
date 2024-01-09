@@ -92,10 +92,7 @@
 						</div>
 						<div class="form_radio">
 							<div></div>
-							<input type="radio" name="thumbnail" value="front" id="radio_front" checked>
-							<label for="radio_front"> <img src="img/front.PNG" /></label>
-							<input type="radio" name="thumbnail" value="back" id="radio_back">
-							<label for="radio_back"> <img src="img/back.PNG" /></label>
+							<input type="radio" name="thumbnail" value="front" id="radio_front" checked> <label for="radio_front"> <img src="img/front.PNG" /></label> <input type="radio" name="thumbnail" value="back" id="radio_back"> <label for="radio_back"> <img src="img/back.PNG" /></label>
 						</div>
 						<div class="form_input">
 							<div>
@@ -151,8 +148,7 @@
 
 					</form>
 					<form action="uploadExcel" method="post" enctype="multipart/form-data">
-						<input type="file" name="file" />
-						<input type="submit" value="Upload" />
+						<input type="file" name="file" /> <input type="submit" value="Upload" />
 					</form>
 
 				</div>
@@ -163,43 +159,29 @@
 			<section id="section1">
 				<h2>취업연계</h2>
 				<div class="job_wrapper">
-					<div class="job_item">
-						<div class="job_info">
-							<img src="img/front.PNG" />
-							<div>
-								<p>쌍용정보통신</p>
-								<p>우정사업정보센터 우편물류시스템 개발</p>
-								<p>D-5</p>
-							</div>
-						</div>
-						<div class="job_detail">
-							<p>학력 : 무관</p>
-							<p>지역 : 나주</p>
-							<p>연봉 : 3,000만원</p>
-							<p>자격요건 : 자바, 자바스크립트 가능자</p>
-						</div>
-					</div>
-					<c:forEach items="${jobs}" var="job">
-						<div class="job_item">
-							<div class="job_info">
-								<img src="img/${job.thumbnail }.PNG" />
-								<div class="job_item_img_hide">
-									<img src="${job.imgpath }" />
-								</div>
-								<div>
-									<p>${job.company}</p>
-									<p>${job.field}</p>
-									<p>${job.duedate }</p>
-								</div>
-							</div>
-							<div class="job_detail">
-								<p>학력 : ${job.academic }</p>
-								<p>지역 : ${job.area }</p>
-								<p>연봉 : ${job.salary }</p>
-								<p>자격요건 : ${job.requirement }</p>
-							</div>
-						</div>
 
+					<c:forEach items="${jobs}" var="job">
+						<c:if test="${job.type eq 'smhrd' }">
+							<div class="job_item">
+								<div class="job_info">
+									<img src="img/${job.thumbnail }.PNG" />
+									<div class="job_item_img_hide">
+										<img src="${job.imgpath }" />
+									</div>
+									<div>
+										<p>${job.company}</p>
+										<p>${job.field}</p>
+										<p>${job.duedate }</p>
+									</div>
+								</div>
+								<div class="job_detail">
+									<p>학력 : ${job.academic }</p>
+									<p>지역 : ${job.area }</p>
+									<p>연봉 : ${job.salary }</p>
+									<p>자격요건 : ${job.requirement }</p>
+								</div>
+							</div>
+						</c:if>
 					</c:forEach>
 
 
@@ -209,39 +191,51 @@
 			<section id="section2">
 				<h2>사람인</h2>
 				<div class="job_wrapper">
-					<div class="job_item_sramin">
-						<div class="job_info">
-							<img src="img/front.PNG" />
-							<div>
-								<p>우아한형제들</p>
-								<p>부문별 경력/신입 인재영입</p>
-								<p>D-5</p>
+					<c:forEach items="${jobs}" var="job">
+						<c:if test="${job.type eq 'saramin' }">
+							<div class="job_item_sramin" data-url="${job.url}">
+								<div class="job_info">
+									<img src="img/${job.thumbnail }.PNG" />
+									<div>
+										<p>${job.company}</p>
+										<p>${job.field}</p>
+										<p>${job.duedate }</p>
+									</div>
+								</div>
+								<div class="job_detail">
+									<p>학력 : ${job.academic }</p>
+									<p>지역 : ${job.area }</p>
+									<p>연봉 : ${job.salary }</p>
+									<p>자격요건 : ${job.requirement }</p>
+								</div>
 							</div>
-						</div>
-						<div class="job_detail">
-							<h1>Detail</h1>
-						</div>
-					</div>
-
+						</c:if>
+					</c:forEach>
 				</div>
 			</section>
 			<section id="section3">
 				<h2>잡코리아</h2>
 				<div class="job_wrapper">
-					<div class="job_item">
-						<div class="job_info">
-							<img src="img/front.PNG" />
-							<div>
-								<p>우아한형제들</p>
-								<p>부문별 경력/신입 인재영입</p>
-								<p>D-5</p>
+					<c:forEach items="${jobs}" var="job">
+						<c:if test="${job.type eq 'jobko' }">
+							<div class="job_item_sramin" data-url="${job.url}">
+								<div class="job_info">
+									<img src="img/${job.thumbnail }.PNG" />
+									<div>
+										<p>${job.company}</p>
+										<p>${job.field}</p>
+										<p>${job.duedate }</p>
+									</div>
+								</div>
+								<div class="job_detail">
+									<p>학력 : ${job.academic }</p>
+									<p>지역 : ${job.area }</p>
+									<p>연봉 : ${job.salary }</p>
+									<p>자격요건 : ${job.requirement }</p>
+								</div>
 							</div>
-						</div>
-						<div class="job_detail">
-							<h1>Detail</h1>
-						</div>
-					</div>
-
+						</c:if>
+					</c:forEach>
 				</div>
 			</section>
 		</div>

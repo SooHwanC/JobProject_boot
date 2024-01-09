@@ -48,6 +48,7 @@ public class JobService {
 				String area = row.getCell(6).getStringCellValue();
 				String salary = row.getCell(7).getStringCellValue();
 				String requirement = row.getCell(8).getStringCellValue();
+				String url = row.getCell(9).getStringCellValue();
 
 				Job job = new Job();
 				job.setType(type);
@@ -59,6 +60,7 @@ public class JobService {
 				job.setArea(area);
 				job.setSalary(salary);
 				job.setRequirement(requirement);
+				job.setUrl(url);
 
 				jobMapper.jobWrite(job); 
 			}

@@ -58,6 +58,14 @@ $(document).ready(function() {
 		$(this).find('.job_detail').hide();
 		$(this).find('.job_info').show();
 	});
+
+	$('.job_item_sramin').hover(function() {
+		$(this).find('.job_info').hide();
+		$(this).find('.job_detail').show();
+	}, function() {
+		$(this).find('.job_detail').hide();
+		$(this).find('.job_info').show();
+	});
 });
 
 
@@ -85,7 +93,7 @@ $("#modal_close_btn2").on("click", function() {
 
 // 모달 관련
 
-$('.job_item_sramin').on('click', function() {
+/*$('.job_item_sramin').on('click', function() {
 	// 팝업의 가로, 세로 크기
 	var popupWidth = 1000;
 	var popupHeight = 800;
@@ -96,7 +104,24 @@ $('.job_item_sramin').on('click', function() {
 
 	// 팝업 창 열기
 	window.open('https://www.saramin.co.kr/zf_user/jobs/relay/pop-view?rec_idx=38563977&t_ref=main&t_ref_content=platinum_fix_expand', '_blank', 'width=' + popupWidth + ', height=' + popupHeight + ', left=' + leftPosition + ', top=' + topPosition);
+});*/
+
+$(document).ready(function() {
+	$(".job_item_sramin").on("click", function() {
+		var url = $(this).data("url");
+
+		// 팝업의 가로, 세로 크기
+		var popupWidth = 1000;
+		var popupHeight = 800;
+
+		// 화면의 가운데를 계산
+		var leftPosition = (window.screen.width - popupWidth) / 2;
+		var topPosition = (window.screen.height - popupHeight) / 2;
+
+		window.open(url, '_blank', 'width=' + popupWidth + ', height=' + popupHeight + ', left=' + leftPosition + ', top=' + topPosition);
+	});
 });
+
 
 
 $(document).ready(function() {

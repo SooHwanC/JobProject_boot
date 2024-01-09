@@ -20,5 +20,6 @@ public class Job {
 	private String salary;
 	private String requirement;
 	private String imgpath;
+	private String url;
 
 }
